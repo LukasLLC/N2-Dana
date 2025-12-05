@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade N2 - Cadastro de Pessoas (Buscas)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>Atividade N2 - Cadastro de Pessoas</h1>
+      <p class="subtitle">Comparação entre Busca Sequencial, Binária (Indexada) e HashMap</p>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="card">
+      <h2>Tabela fixa de pessoas</h2>
+      <p>Cadastro fixo com <strong>5.000 pessoas</strong>, contendo os campos <code>ID</code> e <code>Nome</code>.</p>
+      <div class="list-wrapper">
+        <ul id="lista-registros" class="registro-list"></ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Áreas de busca</h2>
+
+      <div class="busca-bloco">
+        <h3>1) Buscar pelo ID</h3>
+        <label for="campo-id" class="label">Digite o ID da pessoa (1 a 5000):</label>
+        <div class="input-row">
+          <input id="campo-id" type="number" min="1" max="5000" placeholder="Ex: 1234">
+          <button id="botao-buscar-id">Buscar pelo ID</button>
+        </div>
+      </div>
+
+      <div class="busca-bloco">
+        <h3>2) Buscar por nome ou ID</h3>
+        <label for="campo-nome" class="label">Digite o <strong>nome completo</strong> da pessoa ou um ID:</label>
+        <div class="input-row">
+          <input id="campo-nome" type="text" placeholder="Ex: Valentina Silva Souza ou 1234">
+          <button id="botao-buscar-nome">Buscar por nome / ID</button>
+        </div>
+        <p class="hint">
+          Aqui você pode digitar um <strong>nome completo</strong> (igual ao que aparece na tabela) ou o <strong>mesmo ID</strong>. O resultado é a mesma pessoa cadastrada.
+        </p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card" id="resultado-seq">
+          <h3>Busca Sequencial</h3>
+          <p class="status">Aguardando...</p>
+          <p class="time">Tempo (ms): <span>–</span></p>
+        </div>
+        <div class="result-card" id="resultado-bin">
+          <h3>Busca Binária (Indexada)</h3>
+          <p class="status">Aguardando...</p>
+          <p class="time">Tempo (ms): <span>–</span></p>
+        </div>
+        <div class="result-card" id="resultado-hash">
+          <h3>Busca HashMap</h3>
+          <p class="status">Aguardando...</p>
+          <p class="time">Tempo (ms): <span>–</span></p>
+        </div>
+      </div>
+
+      <div class="details" id="detalhes">
+        <h3>Detalhes do resultado</h3>
+        <p>Use uma das áreas de busca acima para encontrar uma pessoa e comparar os tempos em milissegundos.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Trabalho N2 &mdash; Estruturas de Dados / Tabelas Hash &middot; HTML, CSS e JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
